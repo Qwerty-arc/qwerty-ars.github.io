@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=PT Sans&display=swap');
+
+body {
+    font-family: PT Sans, serif;
+    background: linear-gradient(270deg, #000000 17%, #1037fb 90%, #002aff 87%, #0022cc 99%);
+}
+
+p {
+    color: aquamarine;
+}
+
+/* махинация для изменения шрифта для всего сайта ^*/
+.nav-link {
+    color: aquamarine;
+}
+
+.navbar-nav .nav-link.active {
+    color: rgb(145, 145, 145);
+}
+
+.navbar-brand img {
+    width: 40px;
+}
+
+.navbar-toggler {
+    background-color: rgb(145, 145, 145);
+}
+
+.sidebar {
+    color: aquamarine;
+    background: linear-gradient(90deg, #020202 23%, #002aff 78%, #2247ff 87%, #002aff 99%);
+}
+
+.sidebar>p>a {
+    color: rgb(255, 255, 255);
+}
+
+.card {
+    background: linear-gradient(270deg, #020202 23%, #002aff 78%, #2247ff 87%, #002aff 99%);
+    color: aquamarine;
+}
+
+.card a {
+    text-decoration: none;
+    color: aquamarine;
+}
+
+.slide-text,
+.footer-text {
+
+    color: aquamarine;
+    margin: auto auto;
+    /* ^ и по х и по у мы задали задачу отцентровать
+ текст */
+}
+
+footer,
+.btn-outline-primary {
+    background: linear-gradient(90deg, #020202 23%, #002aff 78%, #2247ff 87%, #002aff 99%);
+
+}
+
+.media-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    /* ^выравнивание иконок ютуба и тг по центру */
+
+    .call-anim {
+        animation:  call 2s ease 0s infinite normal forwards;
+    }
+    /* ^infinite для постоянной анимации */
+    @keyframes call {
+
+        0%,
+        100% {
+            transform: translateX(0%);
+            transform-origin: 50% 50%;
+        }
+
+        15% {
+            transform: translateX(-30px) rotate(-6deg);
+        }
+
+        30% {
+            transform: translateX(15px) rotate(6deg);
+        }
+
+        45% {
+            transform: translateX(-15px) rotate(-3.6deg);
+        }
+
+        60% {
+            transform: translateX(9px) rotate(2.4deg);
+        }
+
+        75% {
+            transform: translateX(-6px) rotate(-1.2deg);
+        }
+    }
+    /* ^ .call-anim и @keyframes myAnim для создания анимации для какого-то элемента
+    на сайте webcode tools во вкладке keyframe Animation, call-название анимации */
+
+
+@media (max-width: 755px) {
+    .carousel-indicators {
+        display: none;
+    }
+}
+
+/* ^ для того чтобы убрать нижние кнопки на разрешении телефона */
